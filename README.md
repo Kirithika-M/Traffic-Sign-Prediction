@@ -5,7 +5,7 @@ A deep learning project that uses Convolutional Neural Networks (CNN) to classif
 
 #### Recommended Python Version for Virtual Environment: 3.10.11
 
-#### Guide to install the modules:
+#### Guide to install the modules: 📝
 1. Tensorflow (CPU / GPU) 
 - Command : pip install tensorflow==2.15.0
 
@@ -35,4 +35,5 @@ A deep learning project that uses Convolutional Neural Networks (CNN) to classif
 
 10. Flask-Cors
 - Command : pip install flask-cors==4.0.0
+
 
