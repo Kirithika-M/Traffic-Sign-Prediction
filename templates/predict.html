@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Prediction Result</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🚦 Prediction Result</h1>
+        
+        <div class="result-box">
+            <h2>{{ prediction_class }}</h2>
+            <p>Confidence: {{ confidence }}</p>
+            
+            <h3>Top 3 Predictions:</h3>
+            <ul>
+                {% for pred in top_3_predictions %}
+                <li>{{ pred.class }} - {{ pred.confidence_percentage }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        
+        <a href="/">
+            <button>Predict Another Image</button>
+        </a>
+    </div>
+</body>
+</html>

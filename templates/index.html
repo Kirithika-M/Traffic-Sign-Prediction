@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <title>Traffic Sign Prediction</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+
+  <body>
+    <div class="container">
+      <h1> 🚦 Traffic Sign Predictor </h1>
+      <p>Upload a traffic sign image to predict what it is!</p>
+
+      <form action="/predict" method="POST" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*" required>
+        
+        <button type="submit">Predict</button>
+      </form>
+
+      <div class="result-box">
+        <p id="resultLabel"></p>
+        <p id="resultConfidence"></p>
+      </div>
+    </div>
+
+    
+  </body>
+</html>
